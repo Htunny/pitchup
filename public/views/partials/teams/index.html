@@ -1,12 +1,12 @@
 <div ng-controller="TeamsController as ctrl">
   <header>
     <h1>Teams</h1>
-    <a href="#/teams/new" title="Add a new team"><i class="glyphicon glyphicon-plus"></i>Add a team</a>
+    <a href="#/teams/new" title="Add a team"> Add a team</a>
   </header>
   <ul class="items-result list-group" ng-show="ctrl.teams.length">
-    <li class="list-group-item" ng-repeat="teams in ctrl.teams">
-      <a ng-href="/#/teams/{{team._id}}">{{team.title}}</a>
+    <li class="list-group-item" ng-repeat="team in ctrl.teams">
+      <a ng-href="/#/teams/{{team._id}}">{{team.name}}</a>
     </li>
   </ul>
-  <a href="#/teams/new" title="Add a new team">Add a team</a>
+  <a href="#/teams/new" title="Add a team"> Add a team</a>
 </div>
