@@ -10,13 +10,13 @@ class Team(db.Model):
     name = db.Column(db.String())
     capacity = db.Column(db.Integer())
     number_players = db.Column(db.Integer())
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    created_by = db.Column(db.Integer, db.ForeignKey("users.id"))
 
     def __init__(self, args):
         self.name = args['name']
         self.capacity = args['capacity']
         self.number_players = args['number_players']
-        self.user_id = current_user().id
+        self.created_by = current_user().id
 
     @validates('name')
     def validate_name(self, key, name):

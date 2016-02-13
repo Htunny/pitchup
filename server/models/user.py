@@ -10,7 +10,8 @@ class User(db.Model):
     username = db.Column(db.String())
     email = db.Column(db.String())
     password_hash = db.Column(db.String())
-    teams = db.relationship("Team", cascade="all,delete", backref="users")
+    teams_created = db.relationship("Team", cascade="all,delete", backref="users")
+    teams = db.relationship("Enrollment")
 
     def __init__(self, args):
         self.username = args['username']

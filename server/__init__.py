@@ -34,6 +34,7 @@ db = SQLAlchemy(app)
 import server.controllers.users
 import server.controllers.teams
 import server.controllers.sessions
+import server.controllers.enrollments
 
 
 @app.route('/')
