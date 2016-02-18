@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "python manage.py runserver",
-    "test": "python manage.py cov && python manage.py create_db && npm run update-webdriver && grunt test && python manage.py drop_db",
+    "test": "python manage.py cov && python manage.py create_db && npm run update-webdriver && grunt travis && grunt test && python manage.py drop_db",
     "test-ci": "python manage.py cov && python manage.py create_db && npm run update-webdriver && grunt test",
     "e2e": "python manage.py create_db && npm run update-webdriver && grunt e2e && python manage.py drop_db",
     "update-webdriver": "./node_modules/protractor/bin/webdriver-manager update --standalone --chrome",

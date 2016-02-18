@@ -29,6 +29,8 @@ before_script:
   - sudo apt-get install -y nodejs postfix
   - nodejs -v
   - sudo npm install -g grunt-cli
+  - npm install grunt-protractor-webdriver
+  - npm install grunt-protractor-runner
   - sudo npm install
   - ./node_modules/bower/bin/bower install
   - "export DISPLAY=:99.0"
